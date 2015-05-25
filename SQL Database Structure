@@ -1,0 +1,40 @@
+CREATE DATABASE "ChattApp"
+
+CREATE TABLE "Contacts"
+(
+"UserName" varchar(100),
+"Password" varchar(40),
+"Email" varchar(60),
+CONSTRAINT "UserID_PK" PRIMARY KEY (Username)
+)
+
+CREATE TABLE "UserGroups"
+(
+"UserName" varchar(100),
+"GroupID", int
+CONSTRAINT UserID_FK FOREIGN KEY (UserName)
+REFERENCES Contacts(UserName),
+CONSTRAINT GroupID_FK FOREIGN KEY (GroupID)
+REFERENCES Groups(GroupID)
+)
+
+CREATE TABLE "Groups"
+(
+"GroupID" int,
+"GroupName" varchar(50),
+"DateStarted" date(yyyymmdd),
+CONSTRAINT "GroupID_PK" PRIMARY KEY (GroupID)
+)
+
+CREATE TABLE "MessageLogs"
+(
+"MessageID" int,
+"GroupID" int,
+"UserName" varchar(100),
+"Message" varchar(300)
+CONSTRAINT MessageID_PK (MessageID)
+CONSTRAINT GroupID_FK FOREIGN KEY (GroupID)
+REFERENCES Groups(GroupID),
+CONSTRAINT UserID_FK FOREIGN KEY (UserName)
+REFERENCES Contacts(UserName)
+)
