@@ -1,0 +1,14 @@
+<?php
+require 'Groups.php';
+
+$options = '';
+$filter=mysql_query("select GroupName from Groups);
+while($row = mysql_fetch_array($filter)) {
+    $options .= <option> </option>
+
+<form id='GroupName' name='GroupName' method='post' action=''>
+  <p><label>Group</label></p>
+    <select name='GroupName' id='GroupName'>
+      " . $options . "
+    </select>
+</form>
