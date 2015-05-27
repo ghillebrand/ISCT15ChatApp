@@ -25,7 +25,7 @@ CREATE TABLE MessageLogs(
 	GroupID int,
 	UserName varchar(100),
 	Message varchar(300),
-	CONSTRAINT MessageID PRIMARY KEY (MessageID),
+	CONSTRAINT MessageID_PK PRIMARY KEY (MessageID),
 	CONSTRAINT GroupID2_FK FOREIGN KEY (GroupID)
 	REFERENCES Groups(GroupID),
 	CONSTRAINT UserID2_FK FOREIGN KEY (UserName)
