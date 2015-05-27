@@ -1,4 +1,4 @@
-CREATE DATABASE ChattApp
+CREATE DATABASE ChatApp
 
 CREATE TABLE Contacts(
 	UserName varchar(100),
