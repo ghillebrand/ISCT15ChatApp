@@ -1,0 +1,6 @@
+$conn = chatapp($servername, $username, $password, $dbname);
+
+$sql = "INSERT INTO Messages (AccountName, Message, Date)
+VALUES ('AccName', 'MessageCont', 'DateToday')";
+
+$conn->close();
