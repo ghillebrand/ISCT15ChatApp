@@ -1,18 +1,18 @@
 CREATE DATABASE ChatApp
 
-CREATE TABLE Contacts(
-	UserName varchar(100), //testuser
-	Password varchar(40), //chatapp
+CREATE TABLE ChatApp.Contacts(
+	UserName varchar(100),
+	Password varchar(40),
 	Email varchar(60),
 	CONSTRAINT UserID_PK PRIMARY KEY (Username));
 
-CREATE TABLE Groups(
+CREATE TABLE ChatApp.Groups(
 	GroupID int NOT NULL AUTO_INCREMENT,
 	GroupName varchar(50),
 	DateStarted date,
 	CONSTRAINT GroupID_PK PRIMARY KEY (GroupID));
 
-CREATE TABLE UserGroups(
+CREATE TABLE ChatApp.UserGroups(
 	UserName varchar(100),
 	GroupID int,
 	CONSTRAINT UserID_FK FOREIGN KEY(UserName)
@@ -21,7 +21,7 @@ CREATE TABLE UserGroups(
 	REFERENCES Groups(GroupID),
 	CONSTRAINT UG_PK PRIMARY KEY (UserName, GroupID));
 
-CREATE TABLE MessageLogs(
+CREATE TABLE ChatApp.MessageLogs(
 	MessageID int,
 	GroupID int,
 	UserName varchar(100),
