@@ -7,7 +7,7 @@ CREATE TABLE Contacts(
 	CONSTRAINT UserID_PK PRIMARY KEY (Username));
 
 CREATE TABLE Groups(
-	GroupID int,
+	GroupID int NOT NULL AUTO_INCREMENT,
 	GroupName varchar(50),
 	DateStarted date,
 	CONSTRAINT GroupID_PK PRIMARY KEY (GroupID));
