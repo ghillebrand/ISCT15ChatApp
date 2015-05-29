@@ -18,7 +18,8 @@ CREATE TABLE UserGroups(
 	CONSTRAINT UserID_FK FOREIGN KEY(UserName)
 	REFERENCES Contacts(UserName),
 	CONSTRAINT GroupID_FK FOREIGN KEY(GroupID)
-	REFERENCES Groups(GroupID));
+	REFERENCES Groups(GroupID),
+	CONSTRAINT UG_PK PRIMARY KEY (UserName, GroupID));
 
 CREATE TABLE MessageLogs(
 	MessageID int,
