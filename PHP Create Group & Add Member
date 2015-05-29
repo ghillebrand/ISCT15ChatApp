@@ -15,7 +15,7 @@ $GroupID = "19";
 $GroupName = "Hello";
 $parts = explode('/', "29/05/2015");
 $DateStarted  = "$parts[2]-$parts[1]-$parts[0]";
-$sql = "INSERT INTO Groups VALUES ('$GroupID', '$GroupName', '$DateStarted')"; // SQL ADD STATEMENT
+$sql = "INSERT INTO Groups (GroupName, DateStarted) VALUES ('$GroupID', '$GroupName', '$DateStarted')"; // SQL ADD STATEMENT
 $result = $conn->query($sql);
 
 //Add a Contact to A Group
