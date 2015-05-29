@@ -1,8 +1,8 @@
 CREATE DATABASE ChatApp
 
 CREATE TABLE Contacts(
-	UserName varchar(100),
-	Password varchar(40),
+	UserName varchar(100), //testuser
+	Password varchar(40), //chatapp
 	Email varchar(60),
 	CONSTRAINT UserID_PK PRIMARY KEY (Username));
 
