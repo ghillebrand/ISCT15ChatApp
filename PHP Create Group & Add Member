@@ -1,0 +1,26 @@
+<?php
+
+//Connect To ChatApp
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbName = "ChatApp";
+
+$conn = mysqli_connect($servername, $username, $password, $dbName);
+
+//Add A Group
+
+$GroupID = "19";
+$GroupName = "Hello";
+$parts = explode('/', "29/05/2015");
+$DateStarted  = "$parts[2]-$parts[1]-$parts[0]";
+$sql = "INSERT INTO Groups VALUES ('$GroupID', '$GroupName', '$DateStarted')"; // SQL ADD STATEMENT
+$result = $conn->query($sql);
+
+//Add a Contact to A Group
+
+$GroupID = "13";
+$UserName = "connort1234";
+$sql = "INSERT INTO UserGroups VALUES ('$UserName', '$GroupID')"; // SQL ADD STATEMENT
+$result = $conn->query($sql);
