@@ -12,3 +12,7 @@ while($row = mysql_fetch_array($filter)) {
       " . $options . "
     </select>
 </form>
+
+session_start();
+$_SESSION['groupID'] = $_POST['GroupName'];
+?>
